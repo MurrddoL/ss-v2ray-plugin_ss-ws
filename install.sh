@@ -406,7 +406,7 @@ v2ray_conf_add(){
       }
     },
     {  
-      "port": ${SSx_method}, 
+      "port": ${SSx_port}, 
       "protocol": "shadowsocks",
       "settings": {
         "method": "${SSx_method}",
