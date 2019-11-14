@@ -6,8 +6,6 @@
 ### V2ray 简介
 
 * V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。
-* 本脚本的另一个分支版本（Use Host）地址： https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey 请根据需求进行选择， 感谢作者 dylanbai8 的改进与维护
-* 本脚本为一键完全配置脚本，在所有流程正常运行完毕后，直接按照输出结果设置客户端即可使用
 * 已安装的用户，当出现无法连接的情况时，请用户根据该文档更新 V2ray core 
 * 请注意：我们依然强烈建议你全方面的了解整个程序的工作流程及原理
 
@@ -36,7 +34,7 @@
 ## 安装方式
 ss_v2ray-plugin_ws-tls
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/MurrddoL/ss_v2ray-plugin_ws-tls/master/install.sh?token=AFQNKTJWJVTZW3GHBTJBVQS5ZUXDK) | tee v2ray_ins.log
+bash <(curl -L -s https://raw.githubusercontent.com/MurrddoL/ss_v2ray-plugin_ws-tls/master/install.sh | tee v2ray_ins.log
 ```
 ### 启动方式
 
