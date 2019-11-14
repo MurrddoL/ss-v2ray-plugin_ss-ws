@@ -176,7 +176,7 @@ basic_optimization(){
     fi
 
 }
-information_set(){
+port_alterid_set_set(){
     read -p "请输入Quantumult x端口Port（default:10020）:" SSx_port
     [[ -z ${SSx_port} ]] && SSx_port="10020"
     read -p "请输入Quantumult x路径path（default:/x）:" SSx_path
