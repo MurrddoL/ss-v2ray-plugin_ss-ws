@@ -34,7 +34,7 @@
 ## 安装方式
 ss_v2ray-plugin_ws-tls
 ```
-bash <(curl -L -s https://raw.githubusercontent.com/MurrddoL/ss_v2ray-plugin_ws-tls/master/install.sh | tee v2ray_ins.log
+bash <(curl -L -s https://raw.githubusercontent.com/MurrddoL/ss_v2ray-plugin_ws-tls/master/install.sh) | tee v2ray_ins.log
 ```
 ### 启动方式
 
