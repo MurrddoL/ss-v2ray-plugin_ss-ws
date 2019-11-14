@@ -177,7 +177,7 @@ basic_optimization(){
 
 }
 
-    read -p "请输入Quantumult x端口Port（default:10020）:" SSx_port
+    read -p "请输入Quantumult x端口Port（default:10020，不可为10010、10011、80、443）:" SSx_port
     if [[ -z ${SSx_port} ]]; then
      SSx_port="10020"
     fi
@@ -393,7 +393,7 @@ v2ray_conf_add(){
       }
     },
     { 
-      "port": 8389, 
+      "port": 10011, 
       "protocol": "shadowsocks",
       "settings": {
         "method": "${SSs_method}",
