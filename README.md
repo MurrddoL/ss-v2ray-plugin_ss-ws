@@ -18,7 +18,12 @@
 * Centos 系统用户请预先在防火墙中放行程序相关端口（默认：80，443）
 ## 准备工作
 * 准备一个域名，并将A记录添加好。
-* [V2ray官方说明](https://www.v2ray.com/)，了解 TLS WebSocket 及 V2ray 相关信息
+* 如安装失败，可一键重装为纯净系统后再安装：下例为ubuntu16.04，重装大概需20分钟以上，切勿在vps页面重启/停止等操作，以免失联
+```
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -u 16.04 -v 64 -a -firmware
+```
+默认root密码是：MoeClub.org
+其他系统可见https://moeclub.org/2018/04/03/603/
 * 安装好 curl
 * Quantumult X端口不可为443、80、10010、10011
 ## 安装方式
@@ -61,6 +66,14 @@ Nginx 配置目录： `/etc/nginx/conf/conf.d/v2ray.conf`
 ### 查看客户端配置
 `cat v2ray_info.txt` 
 
+### 可选，安装BBR加速
+
+```
+wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
+chmod +x bbr.sh
+./bbr.sh 
+```
+
 ### 更新说明
 
 ...
@@ -77,6 +90,10 @@ http://www.xuxiaobo.com/?p=5950
 https://github.com/v2ray/discussion/issues/173
 
 https://github.com/crossutility/Quantumult-X/blob/master/v2ray-ss-ws-tls.json
+
+https://moeclub.org/2018/04/03/603/
+
+https://teddysun.com/489.html
 
 
 
