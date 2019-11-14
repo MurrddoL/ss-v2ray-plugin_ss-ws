@@ -482,7 +482,6 @@ nginx_conf_add(){
     }
 EOF
 
-modify_nginx
 judge "Nginx 配置修改"
 
 }
@@ -525,45 +524,21 @@ acme_cron_update(){
     judge "cron 计划任务更新"
 }
 
-vmess_qr_config(){
-    cat >/etc/v2ray/vmess_qr.json <<-EOF
-    {
-        "v": "2",
-        "ps": "wulabing_${domain}",
-        "add": "${domain}",
-        "port": "${port}",
-        "id": "${UUID}",
-        "aid": "${alterID}",
-        "net": "ws",
-        "type": "none",
-        "host": "${domain}",
-        "path": "/${camouflage}/",
-        "tls": "tls"
-    }
-EOF
-
-    vmess_link="vmess://$(cat /etc/v2ray/vmess_qr.json | base64 -w 0)"
-    echo -e "${Red} URL导入链接:${vmess_link} ${Font}" >>./v2ray_info.txt
-    echo -e "${Red} 二维码: ${Font}" >>./v2ray_info.txt
-    echo "${vmess_link}"| qrencode -o - -t utf8 >>./v2ray_info.txt
-}
 
 show_information(){
     clear
     cd ~
 
-    echo -e "${OK} ${Green} V2ray+ws+tls 安装成功" >./v2ray_info.txt
-    echo -e "${Red} V2ray 配置信息 ${Font}" >>./v2ray_info.txt
-    echo -e "${Red} 地址（address）:${Font} ${domain} " >>./v2ray_info.txt
-    echo -e "${Red} 端口（port）：${Font} ${port} " >>./v2ray_info.txt
-    echo -e "${Red} 用户id（UUID）：${Font} ${UUID}" >>./v2ray_info.txt
-    echo -e "${Red} 额外id（alterId）：${Font} ${alterID}" >>./v2ray_info.txt
-    echo -e "${Red} 加密方式（security）：${Font} 自适应 " >>./v2ray_info.txt
-    echo -e "${Red} 传输协议（network）：${Font} ws " >>./v2ray_info.txt
-    echo -e "${Red} 伪装类型（type）：${Font} none " >>./v2ray_info.txt
-    echo -e "${Red} 路径（不要落下/）：${Font} /${camouflage}/ " >>./v2ray_info.txt
-    echo -e "${Red} 底层传输安全：${Font} tls " >>./v2ray_info.txt
-    vmess_qr_config
+    echo -e "${OK} ${Green} ss+v2ray-plugin/ ss+ws_tls 安装成功" >./v2ray_info.txt
+    echo -e "${Red} ss+v2ray-plugin/ ss+ws_tls配置信息 ${Font}" >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin地址（address）:${Font} ${domain} " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin端口（port）：${Font} 443 " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin密码（password）：${Font} ${SSs_pwd} " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin加密方式（method）：${Font} ${SSs_method} " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin插件（plugin）：${Font} v2ray " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin插件选项（plugin+）：${Font} tls;host=${domain};path=${SSs_path} " >>./v2ray_info.txt
+    echo -e "${Red} ss v2ray-plugin插件参数（plugin++）：${Font} fast-open=false " >>./v2ray_info.txt
+    echo -e "${Red} ss+ws_tls（quantumult x）配置：${Font} shadowsocks=${domain}:${SSx_port}, method=${SSx_method}, password=${SSx_pwd}, obfs=ws, obfs-uri=${SSx_path}, fast-open=false, udp-relay=false, tag=ssx"  >>./v2ray_info.txt
     cat ./v2ray_info.txt
 
 }
