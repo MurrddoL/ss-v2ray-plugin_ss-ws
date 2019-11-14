@@ -176,22 +176,49 @@ basic_optimization(){
     fi
 
 }
-port_alterid_set_set(){
+
     read -p "请输入Quantumult x端口Port（default:10020）:" SSx_port
-    [[ -z ${SSx_port} ]] && SSx_port="10020"
+    if [[ -z ${SSx_port} ]]; then
+     SSx_port="10020"
+    fi
+    echo ${SSx_port}
+
     read -p "请输入Quantumult x路径path（default:/x）:" SSx_path
-    [[ -z ${SSx_path} ]] && SSx_path="/x"
+    if [[ -z ${SSx_path} ]]; then
+     SSx_path="/x"
+    fi
+    echo ${SSx_path}
+
     read -p "请输入Quantumult x密码password（default:pwd123）:" SSx_pwd
-    [[ -z ${SSx_pwd} ]] && SSx_pwd="pwd123"
+    if [[ -z ${SSx_pwd} ]]; then
+     SSx_pwd="pwd123"
+    fi
+    echo ${SSx_pwd}
+
     read -p "请输入Quantumult x加密方式method（default:chacha20-ietf）:" SSx_method
-    [[ -z ${SSx_method} ]] && SSx_method="chacha20-ietf"
+    if [[ -z ${SSx_method} ]]; then
+     SSx_method="chacha20-ietf"
+    fi
+    echo ${SSx_method}
+
     read -p "v2ray plugin路径path（default:/s）:" SSs_path
-    [[ -z ${SSs_path} ]] && SSs_path="/s"
+    if [[ -z ${SSs_path} ]]; then
+     SSs_path="/s"
+    fi
+    echo ${SSs_path}
+
     read -p "请输入v2ray plugin密码password（default:pwd123）:" SSs_pwd
-    [[ -z ${SSs_pwd} ]] && SSs_pwd="pwd123"
+    if [[ -z ${SSs_pwd} ]]; then
+     SSs_pwd="pwd123"
+    fi
+    echo ${SSs_pwd}
+
     read -p "请输入v2ray plugin加密方式method（default:chacha20-ietf）:" SSs_method
-    [[ -z ${SSs_method} ]] && SSs_method="chacha20-ietf"
-}
+    if [[ -z ${SSs_method} ]]; then 
+     SSs_method="chacha20-ietf"
+    fi
+    echo ${SSs_method}
+
 
 v2ray_install(){
     if [[ -d /root/v2ray ]];then
