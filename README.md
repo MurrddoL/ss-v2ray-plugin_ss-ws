@@ -1,5 +1,5 @@
-### 用v2ray原生安装，适用于普通ss+v2ray-plugin以及Quantumult X(IOS)/Kitsunebi(Andriod)
-安装v2ray, 同时适配普通 v2ray-plugin 和 Quantumult X/Kitsunebi（即 mux=0 ）的方案
+### 用v2ray原生安装，适用于普通ss v2ray-plugin以及ss ws [Quantumult X(IOS)/Kitsunebi(Andriod)]
+安装v2ray, 同时适配普通 shadowsocks v2ray-plugin 和shadowsocks ws [Quantumult X/Kitsunebi（即 mux=0 ）]的方案
 
 ### 目前支持Debian 9+ / Ubuntu 18.04+ / Centos7+
 
