@@ -17,7 +17,8 @@
 * 本 bash 依赖于 [V2ray 官方安装脚本](https://install.direct/go.sh) 及 [acme.sh](https://github.com/Neilpang/acme.sh) 工作。
 * Centos 系统用户请预先在防火墙中放行程序相关端口（默认：80，443）
 ## 准备工作
-* 准备一个域名，并将A记录添加好。
+* 一个VPS，如[Vultr](https://www.vultr.com/?ref=6906410),点击[注册](https://www.vultr.com/?ref=6906410) ;
+* 准备一个域名，并将A记录添加好;
 * 一些需要的软件
 ```
 sudo apt update && sudo apt upgrade
